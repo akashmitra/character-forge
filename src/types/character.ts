@@ -1,6 +1,6 @@
 import { AbilityScoreKey, SkillKey } from './dnd';
 
-export type AbilityGenerationMethod = 'standard' | 'pointbuy' | 'roll';
+export type AbilityGenerationMethod = 'manual' | 'standard' | 'pointbuy' | 'roll';
 
 export interface AbilityScores {
   str: number;
