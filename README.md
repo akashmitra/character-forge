@@ -43,8 +43,9 @@
   - Click any ability score, saving throw, skill, or weapon attack to roll live d20s with critical hit/miss indicators and modifier breakdowns.
   - Hit Points tracker with `+` / `-` buttons, Hit Dice expenditure, and Spell Slot tracking.
   - **Long Rest** button that instantly restores HP, hit dice, and spell slots.
-- **📄 Printable / PDF Sheet**:
-  - Dedicated high-contrast monochrome paper layout formatted for A4 / US Letter printing and PDF export (`Ctrl + P`).
+- **📄 Embedded PDF Reader & Printable Sheet**:
+  - Automatically loads and populates the official 2024 D&D character sheet PDF template directly in your browser using `pdf-lib`.
+  - In-page embedded PDF reader iframe, direct **Download Filled PDF** button, native **Print PDF** dialog, and an alternative high-contrast web sheet layout.
 - **📖 Slide-out PHB 2024 Reference Compendium**:
   - Search any rule, spell, feat, weapon mastery, or background at any moment with direct `[PHB p. XX]` page references.
 - **💾 100% Client-Side Persistence & Portability**:
