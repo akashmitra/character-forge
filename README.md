@@ -154,7 +154,7 @@ Once installed, the Forge works **100% offline** in basements, conventions, and 
 character-forge/
 ├── docs/
 │   ├── plan.md                 # Original project roadmap & exit criteria
-│   └── system_architecture.md  # Detailed system architecture document
+│   └── architecture.md         # Detailed system architecture document
 ├── scripts/
 │   └── validateData.ts         # Automated test script for dataset verification
 ├── public/
