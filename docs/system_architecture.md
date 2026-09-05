@@ -147,8 +147,9 @@ Built upon the `idb` Promise-based client:
 
 ## 5. User Interface & View Layer
 
-| View | Purpose & Functionality |
+| View / Component | Purpose & Functionality |
 | :--- | :--- |
+| **Header & Fiery d20** | Top navigation bar with animated molten fiery d20 die, character overview, quick actions, and compendium toggle. |
 | **Creation Wizard** | 9-step guided walkthrough with real-time validation, background ASI toggles, Point Buy math, and 4d6 dice rolling. |
 | **Character Sheet** | Interactive tabletop interface with clickable ability checks, saving throws, weapon attacks, HP +/- counters, and spell slot toggles. |
 | **Printable Sheet** | High-contrast, black/white & gold monochrome layout structured for A4/Letter paper printing and PDF export (`window.print()`). |

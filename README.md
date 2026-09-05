@@ -155,7 +155,7 @@ character-forge/
 ├── scripts/
 │   └── validateData.ts         # Automated test script for dataset verification
 ├── public/
-│   ├── favicon.svg             # Stylized d20 gold crest
+│   ├── favicon.svg             # Stylized fiery d20 crest
 │   └── manifest.webmanifest    # PWA configuration
 ├── src/
 │   ├── data/                   # 2024 PHB JSON datasets (with mandatory phbPage)
@@ -177,7 +177,7 @@ character-forge/
 │   ├── state/
 │   │   └── CharacterContext.tsx# Central creation & active sheet state
 │   ├── components/
-│   │   ├── common/             # Header, ParchmentCard, PHBBadge, DiceRollModal
+│   │   ├── common/             # Header, FieryD20Logo, ParchmentCard, PHBBadge, DiceRollModal
 │   │   ├── wizard/             # 9-step character creation wizard
 │   │   ├── sheet/              # Interactive & printable character sheets
 │   │   ├── roster/             # Character manager & gallery
