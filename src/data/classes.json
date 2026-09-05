@@ -1,0 +1,587 @@
+[
+  {
+    "id": "barbarian",
+    "name": "Barbarian",
+    "tagline": "A fierce warrior who channels primal rage to devastate foes",
+    "description": "Barbarians are defined by their connection to the primal forces of the world. In battle, they unleash a raw, instinctual fury known as Rage that grants formidable resilience and lethal striking power.",
+    "hitDie": 12,
+    "primaryAbility": ["str"],
+    "savingThrows": ["str", "con"],
+    "armorTraining": ["Light Armor", "Medium Armor", "Shields"],
+    "weaponTraining": ["Simple Weapons", "Martial Weapons"],
+    "weaponMasteryCount": 2,
+    "spellcasterType": "none",
+    "skillChoices": {
+      "count": 2,
+      "options": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"]
+    },
+    "features": [
+      {
+        "name": "Rage",
+        "level": 1,
+        "phbPage": 52,
+        "description": "As a Bonus Action, enter a primal Rage for 10 minutes. You gain Advantage on Strength checks and saves, +2 bonus to melee damage rolls using Strength, and Resistance to Bludgeoning, Piercing, and Slashing damage. Rage lasts if you attack, force a save, take damage, or use a Bonus Action to extend it."
+      },
+      {
+        "name": "Unarmored Defense",
+        "level": 1,
+        "phbPage": 53,
+        "description": "While not wearing armor, your base Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a Shield and still gain this benefit."
+      },
+      {
+        "name": "Weapon Mastery",
+        "level": 1,
+        "phbPage": 53,
+        "description": "Your training allows you to use the mastery properties of two kinds of Simple or Martial melee weapons (e.g. Greataxe Cleave, Handaxe Vex)."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Primal Raider Package",
+        "items": ["Greataxe", "Handaxe", "Handaxe", "Explorer's Pack", "4 Javelins"],
+        "description": "Greataxe, 2 Handaxes, 4 Javelins, Explorer's Pack, and 15 GP"
+      },
+      "optionBGold": 75
+    },
+    "phbPage": 50
+  },
+  {
+    "id": "bard",
+    "name": "Bard",
+    "tagline": "An inspiring magician whose power echoes the music of creation",
+    "description": "Bards weave words and music into powerful arcane effects. Whether scholar, skald, or scoundrel, a Bard’s presence inspires allies and confounds enemies.",
+    "hitDie": 8,
+    "primaryAbility": ["cha"],
+    "savingThrows": ["dex", "cha"],
+    "armorTraining": ["Light Armor"],
+    "weaponTraining": ["Simple Weapons"],
+    "toolProficiencies": ["Musical Instrument (three kinds of your choice)"],
+    "weaponMasteryCount": 0,
+    "spellcasterType": "full",
+    "spellcastingAbility": "cha",
+    "cantripsKnownL1": 2,
+    "spellsPreparedL1": 4,
+    "spellSlotsL1": { "1": 2 },
+    "skillChoices": {
+      "count": 3,
+      "options": [
+        "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History",
+        "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception",
+        "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"
+      ]
+    },
+    "features": [
+      {
+        "name": "Bardic Inspiration",
+        "level": 1,
+        "phbPage": 58,
+        "description": "As a Bonus Action, confer a d6 Bardic Inspiration die to an ally within 60 feet. Within 1 hour, that ally can add the die to one d20 roll or reaction heal. You have uses equal to your Charisma modifier (minimum of 1), restored on a Long Rest."
+      },
+      {
+        "name": "Spellcasting",
+        "level": 1,
+        "phbPage": 59,
+        "description": "You cast spells from the Bard spell list using Charisma as your spellcasting ability. You know 2 cantrips and prepare 4 level 1 spells."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Troubadour Package",
+        "items": ["Leather Armor", "Dagger", "Dagger", "Lute", "Entertainer's Pack"],
+        "description": "Leather Armor, 2 Daggers, Musical Instrument of choice, Entertainer's Pack, and 18 GP"
+      },
+      "optionBGold": 90
+    },
+    "phbPage": 56
+  },
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "tagline": "A miraculous priest wielding divine magic in service of a higher power",
+    "description": "Clerics are conduits for divine power, able to heal, smite undead, and bolster allies through righteous miracles bestowed by their deity or pantheon.",
+    "hitDie": 8,
+    "primaryAbility": ["wis"],
+    "savingThrows": ["wis", "cha"],
+    "armorTraining": ["Light Armor", "Medium Armor", "Shields"],
+    "weaponTraining": ["Simple Weapons"],
+    "weaponMasteryCount": 0,
+    "spellcasterType": "full",
+    "spellcastingAbility": "wis",
+    "cantripsKnownL1": 3,
+    "spellsPreparedL1": 4,
+    "spellSlotsL1": { "1": 2 },
+    "skillChoices": {
+      "count": 2,
+      "options": ["History", "Insight", "Medicine", "Persuasion", "Religion"]
+    },
+    "features": [
+      {
+        "name": "Divine Order",
+        "level": 1,
+        "phbPage": 66,
+        "description": "Choose your sacred calling: Protector (gain Heavy Armor training and Martial Weapon training) or Thaumaturge (gain 1 extra cantrip and add Wisdom modifier to Religion & Arcana checks).",
+        "choices": [
+          { "name": "Protector", "description": "Trained for battle: Gain proficiency with Martial Weapons and Heavy Armor." },
+          { "name": "Thaumaturge", "description": "Devoted to mystical study: Gain 1 extra Cleric cantrip and add your Wisdom mod to Religion and Arcana checks." }
+        ]
+      },
+      {
+        "name": "Spellcasting",
+        "level": 1,
+        "phbPage": 66,
+        "description": "You prepare divine spells from the Cleric spell list using Wisdom. You prepare 4 spells and know 3 cantrips."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Devout Herald Package",
+        "items": ["Chain Shirt", "Shield", "Mace", "Holy Symbol", "Priest's Pack"],
+        "description": "Chain Shirt, Shield, Mace, Holy Symbol, Priest's Pack, and 7 GP"
+      },
+      "optionBGold": 110
+    },
+    "phbPage": 64
+  },
+  {
+    "id": "druid",
+    "name": "Druid",
+    "tagline": "A priest of the Old Faith wielding elemental magic and beast shapes",
+    "description": "Druids revere nature above all, channeling primal spirits and elemental energies. They are protectors of balance and wilderness stewards.",
+    "hitDie": 8,
+    "primaryAbility": ["wis"],
+    "savingThrows": ["int", "wis"],
+    "armorTraining": ["Light Armor", "Shields"],
+    "weaponTraining": ["Simple Weapons"],
+    "toolProficiencies": ["Herbalism Kit"],
+    "weaponMasteryCount": 0,
+    "spellcasterType": "full",
+    "spellcastingAbility": "wis",
+    "cantripsKnownL1": 2,
+    "spellsPreparedL1": 4,
+    "spellSlotsL1": { "1": 2 },
+    "skillChoices": {
+      "count": 2,
+      "options": ["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival"]
+    },
+    "features": [
+      {
+        "name": "Primal Order",
+        "level": 1,
+        "phbPage": 74,
+        "description": "Choose your sacred dedication: Magician (gain 1 bonus cantrip and add Wisdom to Nature and Animal Handling) or Warden (gain Medium Armor training and Martial Weapon training).",
+        "choices": [
+          { "name": "Magician", "description": "Devoted to primal spellcraft: Gain 1 bonus Druid cantrip and add your Wisdom mod to Nature and Animal Handling checks." },
+          { "name": "Warden", "description": "Armored defender of the wild: Gain proficiency with Medium Armor and Martial Weapons." }
+        ]
+      },
+      {
+        "name": "Druidic",
+        "level": 1,
+        "phbPage": 75,
+        "description": "You know Druidic, the secret language of druids, and automatically learn Speak with Animals as always-prepared."
+      },
+      {
+        "name": "Spellcasting",
+        "level": 1,
+        "phbPage": 75,
+        "description": "You cast spells from the Druid list using Wisdom. You prepare 4 spells and know 2 cantrips."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Wilderness Warden Package",
+        "items": ["Leather Armor", "Shield", "Sickle", "Druidic Focus", "Explorer's Pack", "Herbalism Kit"],
+        "description": "Leather Armor, Shield, Sickle, Druidic Focus, Explorer's Pack, Herbalism Kit, and 9 GP"
+      },
+      "optionBGold": 50
+    },
+    "phbPage": 72
+  },
+  {
+    "id": "fighter",
+    "name": "Fighter",
+    "tagline": "A master of martial combat, skilled with a variety of weapons and armor",
+    "description": "Fighters share an unparalleled mastery with weapons and tactical combat. Through disciplined training, they stand resolute on any battlefield.",
+    "hitDie": 10,
+    "primaryAbility": ["str", "dex"],
+    "savingThrows": ["str", "con"],
+    "armorTraining": ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"],
+    "weaponTraining": ["Simple Weapons", "Martial Weapons"],
+    "weaponMasteryCount": 3,
+    "spellcasterType": "none",
+    "skillChoices": {
+      "count": 2,
+      "options": ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]
+    },
+    "features": [
+      {
+        "name": "Fighting Style",
+        "level": 1,
+        "phbPage": 83,
+        "description": "Adopt a Fighting Style feat: Archery (+2 to ranged attacks), Defense (+1 AC in armor), Dueling (+2 damage with 1H weapon), Great Weapon Fighting (reroll 1s/2s on 2H damage), Protection, or Two-Weapon Fighting.",
+        "choices": [
+          { "name": "Archery", "description": "You gain a +2 bonus to attack rolls you make with ranged weapons." },
+          { "name": "Defense", "description": "While you are wearing armor, you gain a +1 bonus to Armor Class." },
+          { "name": "Dueling", "description": "When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with it." },
+          { "name": "Great Weapon Fighting", "description": "When you roll a 1 or 2 on a damage die for an attack with a two-handed melee weapon, you can reroll the die." },
+          { "name": "Two-Weapon Fighting", "description": "When you make the extra attack from the Light property, you can add your ability modifier to the damage roll." },
+          { "name": "Interception", "description": "When a creature you can see hits a target within 5 feet with an attack, you can use your Reaction to reduce the damage by 1d10 + PB." }
+        ]
+      },
+      {
+        "name": "Second Wind",
+        "level": 1,
+        "phbPage": 83,
+        "description": "As a Bonus Action, regain 1d10 + Fighter level HP. You have 2 uses per Short or Long Rest, and can also use a charge to add 1d10 to a failed skill check (Tactical Mind)."
+      },
+      {
+        "name": "Weapon Mastery",
+        "level": 1,
+        "phbPage": 83,
+        "description": "You can use the mastery properties of three kinds of weapons of your choice."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Armored Veteran Package",
+        "items": ["Chain Mail", "Greatsword", "Shield", "Longsword", "Dungeon Pack", "Crossbow, Light", "Crossbow Bolts (20)"],
+        "description": "Chain Mail or Scale Mail, Martial Weapon of choice, Shield or 2nd weapon, Light Crossbow with 20 bolts, Dungeoneer's Pack, and 11 GP"
+      },
+      "optionBGold": 155
+    },
+    "phbPage": 80
+  },
+  {
+    "id": "monk",
+    "name": "Monk",
+    "tagline": "A master of martial arts, harnessing internal energy to strike and dodge",
+    "description": "Monks channel the flow of Focus through their physical bodies, achieving extraordinary speed, agility, and unarmored combat prowess.",
+    "hitDie": 8,
+    "primaryAbility": ["dex", "wis"],
+    "savingThrows": ["str", "dex"],
+    "armorTraining": [],
+    "weaponTraining": ["Simple Weapons", "Shortswords"],
+    "toolProficiencies": ["Artisan's Tools or Musical Instrument (one kind)"],
+    "weaponMasteryCount": 0,
+    "spellcasterType": "none",
+    "skillChoices": {
+      "count": 2,
+      "options": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]
+    },
+    "features": [
+      {
+        "name": "Martial Arts",
+        "level": 1,
+        "phbPage": 90,
+        "description": "Use Dexterity instead of Strength for Monk weapons and Unarmed Strikes. Your Unarmed Strike damage is 1d6. When you make an Unarmed Strike or attack with a Monk weapon on your turn, you can make one Unarmed Strike as a Bonus Action."
+      },
+      {
+        "name": "Unarmored Defense",
+        "level": 1,
+        "phbPage": 91,
+        "description": "While you wear no armor and wield no shield, your base AC equals 10 + your Dexterity modifier + your Wisdom modifier."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Disciplined Pilgrim Package",
+        "items": ["Spear", "Shortsword", "Darts (5)", "Explorer's Pack"],
+        "description": "Spear, Shortsword, 5 Darts, Explorer's Pack, and 11 GP"
+      },
+      "optionBGold": 50
+    },
+    "phbPage": 88
+  },
+  {
+    "id": "paladin",
+    "name": "Paladin",
+    "tagline": "A holy warrior bound to a sacred oath, smiting evil with radiant fury",
+    "description": "Paladins stand as beacons of hope and divine retribution, bound by sacred vows to uphold justice and purge evil.",
+    "hitDie": 10,
+    "primaryAbility": ["str", "cha"],
+    "savingThrows": ["wis", "cha"],
+    "armorTraining": ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"],
+    "weaponTraining": ["Simple Weapons", "Martial Weapons"],
+    "weaponMasteryCount": 2,
+    "spellcasterType": "half",
+    "spellcastingAbility": "cha",
+    "cantripsKnownL1": 0,
+    "spellsPreparedL1": 2,
+    "spellSlotsL1": { "1": 2 },
+    "skillChoices": {
+      "count": 2,
+      "options": ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"]
+    },
+    "features": [
+      {
+        "name": "Lay on Hands",
+        "level": 1,
+        "phbPage": 98,
+        "description": "You have a pool of healing power equal to 5 × Paladin level (5 HP at level 1). As a Bonus Action, touch a creature to restore HP from the pool or expend 5 points to cure the Poisoned condition."
+      },
+      {
+        "name": "Weapon Mastery",
+        "level": 1,
+        "phbPage": 98,
+        "description": "You can use the mastery properties of two kinds of weapons of your choice."
+      },
+      {
+        "name": "Spellcasting",
+        "level": 1,
+        "phbPage": 98,
+        "description": "In the 2024 rules, Paladins gain Spellcasting at Level 1! You prepare 2 level 1 spells and have 2 level 1 slots."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Crusader Package",
+        "items": ["Chain Mail", "Shield", "Longsword", "Javelins (6)", "Holy Symbol", "Priest's Pack"],
+        "description": "Chain Mail, Shield, Longsword or Warhammer, 6 Javelins, Holy Symbol, Priest's Pack, and 9 GP"
+      },
+      "optionBGold": 150
+    },
+    "phbPage": 96
+  },
+  {
+    "id": "ranger",
+    "name": "Ranger",
+    "tagline": "A master of the wild and frontier scout, tracking enemies with lethal focus",
+    "description": "Rangers are skilled stalkers and skirmishers who guard the untamed borders between civilization and the wilderness.",
+    "hitDie": 10,
+    "primaryAbility": ["dex", "wis"],
+    "savingThrows": ["str", "dex"],
+    "armorTraining": ["Light Armor", "Medium Armor", "Shields"],
+    "weaponTraining": ["Simple Weapons", "Martial Weapons"],
+    "weaponMasteryCount": 2,
+    "spellcasterType": "half",
+    "spellcastingAbility": "wis",
+    "cantripsKnownL1": 0,
+    "spellsPreparedL1": 2,
+    "spellSlotsL1": { "1": 2 },
+    "skillChoices": {
+      "count": 3,
+      "options": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"]
+    },
+    "features": [
+      {
+        "name": "Spellcasting",
+        "level": 1,
+        "phbPage": 106,
+        "description": "In the 2024 rules, Rangers gain Spellcasting at Level 1! You prepare 2 level 1 spells from the Ranger list using Wisdom."
+      },
+      {
+        "name": "Favored Enemy",
+        "level": 1,
+        "phbPage": 106,
+        "description": "You always have Hunter's Mark prepared, and you can cast it twice per Long Rest without expending a spell slot."
+      },
+      {
+        "name": "Weapon Mastery",
+        "level": 1,
+        "phbPage": 107,
+        "description": "You can use the mastery properties of two kinds of weapons of your choice."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Scout Archer Package",
+        "items": ["Studded Leather Armor", "Shortsword", "Shortsword", "Longbow", "Arrows (20)", "Quiver", "Explorer's Pack"],
+        "description": "Studded Leather Armor, 2 Shortswords, Longbow, 20 Arrows, Quiver, Explorer's Pack, and 7 GP"
+      },
+      "optionBGold": 150
+    },
+    "phbPage": 104
+  },
+  {
+    "id": "rogue",
+    "name": "Rogue",
+    "tagline": "A scoundrel who uses stealth and expertise to overcome any obstacle",
+    "description": "Rogues rely on precision, cunning, and surgical strikes. They excel at finding weaknesses and slipping past security.",
+    "hitDie": 8,
+    "primaryAbility": ["dex"],
+    "savingThrows": ["dex", "int"],
+    "armorTraining": ["Light Armor"],
+    "weaponTraining": ["Simple Weapons", "Martial Weapons with Finesse or Light"],
+    "toolProficiencies": ["Thieves' Tools"],
+    "weaponMasteryCount": 2,
+    "spellcasterType": "none",
+    "skillChoices": {
+      "count": 4,
+      "options": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"]
+    },
+    "features": [
+      {
+        "name": "Expertise",
+        "level": 1,
+        "phbPage": 114,
+        "description": "Choose two of your skill proficiencies or Thieves' Tools proficiency. Your Proficiency Bonus is doubled for any ability check using them."
+      },
+      {
+        "name": "Sneak Attack",
+        "level": 1,
+        "phbPage": 114,
+        "description": "Once per turn, deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll, or if another enemy of the target is within 5 feet of it. Weapon must use Finesse or be Ranged."
+      },
+      {
+        "name": "Thieves' Cant",
+        "level": 1,
+        "phbPage": 114,
+        "description": "You know Thieves' Cant, a secret mix of dialect, argot, and code, plus one extra language of your choice."
+      },
+      {
+        "name": "Weapon Mastery",
+        "level": 1,
+        "phbPage": 114,
+        "description": "You can use the mastery properties of two kinds of weapons of your choice."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Shadow Infiltrator Package",
+        "items": ["Leather Armor", "Rapier", "Shortbow", "Arrows (20)", "Quiver", "Thieves' Tools", "Burglar's Pack", "Dagger", "Dagger"],
+        "description": "Leather Armor, Rapier or Shortsword, Shortbow with 20 arrows, 2 Daggers, Thieves' Tools, Burglar's Pack, and 8 GP"
+      },
+      "optionBGold": 110
+    },
+    "phbPage": 112
+  },
+  {
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "tagline": "A spellcaster who draws on inherent arcane power from birth or destiny",
+    "description": "Sorcerers carry innate magic coursing through their bloodline, infused by planar storms, draconic power, or wild chaos.",
+    "hitDie": 6,
+    "primaryAbility": ["cha"],
+    "savingThrows": ["con", "cha"],
+    "armorTraining": [],
+    "weaponTraining": ["Simple Weapons"],
+    "weaponMasteryCount": 0,
+    "spellcasterType": "full",
+    "spellcastingAbility": "cha",
+    "cantripsKnownL1": 4,
+    "spellsPreparedL1": 2,
+    "spellSlotsL1": { "1": 2 },
+    "skillChoices": {
+      "count": 2,
+      "options": ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"]
+    },
+    "features": [
+      {
+        "name": "Innate Sorcery",
+        "level": 1,
+        "phbPage": 122,
+        "description": "As a Bonus Action, unleash the wellspring of magic within you for 1 minute. While active, your spell save DC increases by 1, and you gain Advantage on attack rolls of Sorcerer spells. You can use this twice per Long Rest."
+      },
+      {
+        "name": "Spellcasting",
+        "level": 1,
+        "phbPage": 122,
+        "description": "You cast Sorcerer spells using Charisma. You know 4 cantrips and prepare 2 level 1 spells."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Innate Arcanist Package",
+        "items": ["Spear", "Arcane Focus", "Dungeoneer's Pack", "Dagger", "Dagger"],
+        "description": "Spear, 2 Daggers, Arcane Focus (Crystal or Orb), Dungeoneer's Pack, and 28 GP"
+      },
+      "optionBGold": 50
+    },
+    "phbPage": 120
+  },
+  {
+    "id": "warlock",
+    "name": "Warlock",
+    "tagline": "A wielder of magic derived from a bargain with an otherworldly entity",
+    "description": "Warlocks forge pacts with ancient patrons—fiends, archfey, great old ones, or celestial beings—gaining forbidden eldritch lore.",
+    "hitDie": 8,
+    "primaryAbility": ["cha"],
+    "savingThrows": ["wis", "cha"],
+    "armorTraining": ["Light Armor"],
+    "weaponTraining": ["Simple Weapons"],
+    "weaponMasteryCount": 0,
+    "spellcasterType": "pact",
+    "spellcastingAbility": "cha",
+    "cantripsKnownL1": 2,
+    "spellsPreparedL1": 2,
+    "spellSlotsL1": { "1": 1 },
+    "skillChoices": {
+      "count": 2,
+      "options": ["Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion"]
+    },
+    "features": [
+      {
+        "name": "Eldritch Invocations",
+        "level": 1,
+        "phbPage": 130,
+        "description": "In the 2024 rules, Warlocks gain Invocations at Level 1! You choose 1 invocation (such as Pact of the Blade, Pact of the Tome, Pact of the Chain, Agonizing Blast, or Armor of Shadows).",
+        "choices": [
+          { "name": "Pact of the Blade", "description": "Bond with a melee weapon, using Charisma for its attack and damage rolls." },
+          { "name": "Pact of the Tome", "description": "Gain a grimoire granting 3 bonus cantrips and 2 ritual spells from any list." },
+          { "name": "Pact of the Chain", "description": "Gain Find Familiar cast as a ritual with special forms (Imp, Quasit, Sprite, etc.)." },
+          { "name": "Armor of Shadows", "description": "Cast Mage Armor on yourself at will without expending a spell slot." }
+        ]
+      },
+      {
+        "name": "Pact Magic",
+        "level": 1,
+        "phbPage": 131,
+        "description": "Your spell slots recharge on a Short or Long Rest. At level 1, you have 1 slot of level 1, know 2 cantrips, and prepare 2 spells."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Occultist Package",
+        "items": ["Leather Armor", "Arcane Focus", "Scholar's Pack", "Dagger", "Dagger", "Sickle"],
+        "description": "Leather Armor, Sickle, 2 Daggers, Arcane Focus, Scholar's Pack, and 15 GP"
+      },
+      "optionBGold": 100
+    },
+    "phbPage": 128
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "tagline": "A scholarly magic-user capable of manipulating the structures of reality",
+    "description": "Wizards master magic through study, experimentation, and intellect. Their spellbooks hold vast arsenals of arcane formulas.",
+    "hitDie": 6,
+    "primaryAbility": ["int"],
+    "savingThrows": ["int", "wis"],
+    "armorTraining": [],
+    "weaponTraining": ["Simple Weapons"],
+    "weaponMasteryCount": 0,
+    "spellcasterType": "full",
+    "spellcastingAbility": "int",
+    "cantripsKnownL1": 3,
+    "spellsPreparedL1": 4,
+    "spellSlotsL1": { "1": 2 },
+    "skillChoices": {
+      "count": 2,
+      "options": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"]
+    },
+    "features": [
+      {
+        "name": "Spellbook & Ritual Casting",
+        "level": 1,
+        "phbPage": 140,
+        "description": "Your spellbook contains 6 level 1 spells of your choice. You prepare 4 of them each day. You can cast any ritual spell in your spellbook even if not prepared."
+      },
+      {
+        "name": "Arcane Recovery",
+        "level": 1,
+        "phbPage": 141,
+        "description": "Once per day when you finish a Short Rest, you can choose expended spell slots to recover with a combined level equal to at least 1 (at Level 1, you regain 1 level-1 slot)."
+      }
+    ],
+    "startingEquipmentOptions": {
+      "optionA": {
+        "name": "Scholar of the Arcane Package",
+        "items": ["Spellbook", "Arcane Focus", "Scholar's Pack", "Dagger", "Dagger", "Quarterstaff"],
+        "description": "Spellbook, Arcane Focus (Wand or Staff), Quarterstaff, 2 Daggers, Scholar's Pack, and 5 GP"
+      },
+      "optionBGold": 55
+    },
+    "phbPage": 138
+  }
+]
+

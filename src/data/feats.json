@@ -1,0 +1,153 @@
+[
+  {
+    "id": "alert",
+    "name": "Alert",
+    "category": "Origin",
+    "description": "Always vigilant, you react swiftly to danger and coordinate initiative with comrades.",
+    "bullets": [
+      "Initiative Proficiency: You add your Proficiency Bonus (+2 at L1) to your Initiative rolls.",
+      "Initiative Swap: Immediately after you roll Initiative, you can swap your Initiative roll with the Initiative roll of one willing ally who can see or hear you."
+    ],
+    "phbPage": 208
+  },
+  {
+    "id": "crafter",
+    "name": "Crafter",
+    "category": "Origin",
+    "description": "You are adept at crafting tools, gear, and negotiating artisan discounts.",
+    "bullets": [
+      "Tool Proficiency: You gain proficiency with three different Artisan's Tools of your choice.",
+      "Discount: Whenever you buy a nonmagical item, you receive a 20 percent discount on it.",
+      "Fast Crafting: When you finish a Long Rest, you can craft one piece of gear from the Fast Crafting table if you have the required tools and raw materials."
+    ],
+    "phbPage": 208
+  },
+  {
+    "id": "healer",
+    "name": "Healer",
+    "category": "Origin",
+    "description": "You have the training and instincts to patch up wounds and revive fallen allies.",
+    "bullets": [
+      "Battle Medic: When you use a Healer's Kit on a creature to stabilize them, they also regain 1 Hit Point.",
+      "Healing Rerolls: Whenever you cast a spell or use a feature that restores Hit Points, you can reroll any 1s on the healing dice."
+    ],
+    "phbPage": 208
+  },
+  {
+    "id": "lucky",
+    "name": "Lucky",
+    "category": "Origin",
+    "description": "You have inexplicable luck that seems to bend fate in your favor when you need it most.",
+    "bullets": [
+      "Luck Points: You have a number of Luck Points equal to your Proficiency Bonus (2 at L1). You regain all expended Luck Points when you finish a Long Rest.",
+      "Advantage / Disadvantage: When you make a d20 roll, you can spend 1 Luck Point to give yourself Advantage on the roll. When an attack hits you, you can spend 1 Luck Point to give the attacker Disadvantage on the attack roll."
+    ],
+    "phbPage": 208
+  },
+  {
+    "id": "magic-initiate-cleric",
+    "name": "Magic Initiate (Cleric)",
+    "category": "Origin",
+    "description": "You have learned the basics of divine prayer and spellcasting.",
+    "bullets": [
+      "Two Cantrips: Choose two cantrips from the Cleric spell list (e.g. Guidance, Sacred Flame, Spare the Dying).",
+      "One 1st-Level Spell: Choose one level 1 spell from the Cleric spell list (e.g. Bless, Cure Wounds, Healing Word). You always have it prepared and can cast it once per Long Rest without a spell slot, as well as using available slots.",
+      "Spellcasting Ability: Intelligence, Wisdom, or Charisma (chosen when you take this feat)."
+    ],
+    "grantsSpellsChoice": {
+      "spellList": "Cleric",
+      "cantripCount": 2,
+      "l1Count": 1
+    },
+    "phbPage": 209
+  },
+  {
+    "id": "magic-initiate-druid",
+    "name": "Magic Initiate (Druid)",
+    "category": "Origin",
+    "description": "You have learned the basics of primal communion and nature spellcraft.",
+    "bullets": [
+      "Two Cantrips: Choose two cantrips from the Druid spell list (e.g. Druidcraft, Guidance, Shillelagh, Thorn Whip).",
+      "One 1st-Level Spell: Choose one level 1 spell from the Druid spell list (e.g. Entangle, Goodberry, Healing Word, Thunderwave). You always have it prepared and can cast it once per Long Rest without a spell slot.",
+      "Spellcasting Ability: Intelligence, Wisdom, or Charisma (chosen when you take this feat)."
+    ],
+    "grantsSpellsChoice": {
+      "spellList": "Druid",
+      "cantripCount": 2,
+      "l1Count": 1
+    },
+    "phbPage": 209
+  },
+  {
+    "id": "magic-initiate-wizard",
+    "name": "Magic Initiate (Wizard)",
+    "category": "Origin",
+    "description": "You have learned the fundamentals of scholarly arcane spellcasting.",
+    "bullets": [
+      "Two Cantrips: Choose two cantrips from the Wizard spell list (e.g. Fire Bolt, Mage Hand, Minor Illusion, Ray of Frost).",
+      "One 1st-Level Spell: Choose one level 1 spell from the Wizard spell list (e.g. Shield, Magic Missile, Find Familiar, Feather Fall). You always have it prepared and can cast it once per Long Rest without a spell slot.",
+      "Spellcasting Ability: Intelligence, Wisdom, or Charisma (chosen when you take this feat)."
+    ],
+    "grantsSpellsChoice": {
+      "spellList": "Wizard",
+      "cantripCount": 2,
+      "l1Count": 1
+    },
+    "phbPage": 209
+  },
+  {
+    "id": "musician",
+    "name": "Musician",
+    "category": "Origin",
+    "description": "You are a master entertainer capable of inspiring the hearts of your companions during rests.",
+    "bullets": [
+      "Instrument Training: You gain proficiency with three Musical Instruments of your choice.",
+      "Inspiring Song: As you finish a Short Rest or Long Rest, you can play a song on a musical instrument. When you do, choose a number of allies within 30 feet equal to your PB (+2 at L1). Each chosen ally gains Heroic Inspiration."
+    ],
+    "phbPage": 209
+  },
+  {
+    "id": "savage-attacker",
+    "name": "Savage Attacker",
+    "category": "Origin",
+    "description": "You strike with brutal force, maximizing damage on your weapon hits.",
+    "bullets": [
+      "Brutal Strikes: Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either total."
+    ],
+    "phbPage": 209
+  },
+  {
+    "id": "skilled",
+    "name": "Skilled",
+    "category": "Origin",
+    "description": "You have dedicated yourself to learning a broad variety of arts and skills.",
+    "bullets": [
+      "Versatile Mastery: You gain proficiency in any combination of three skills or tools of your choice."
+    ],
+    "grantsSkillChoicesCount": 3,
+    "phbPage": 210
+  },
+  {
+    "id": "tavern-brawler",
+    "name": "Tavern Brawler",
+    "category": "Origin",
+    "description": "Accustomed to rough-and-tumble barroom brawls, you can fight with fists and improvised items.",
+    "bullets": [
+      "Enhanced Unarmed Strike: When you hit with an Unarmed Strike, its damage is 1d4 + Strength modifier instead of 1.",
+      "Damage Rerolls: Whenever you roll damage for an Unarmed Strike, you can reroll any 1s on the damage die.",
+      "Push: When you hit a creature with an Unarmed Strike, you can push them 5 feet away from you (once per turn)."
+    ],
+    "phbPage": 210
+  },
+  {
+    "id": "tough",
+    "name": "Tough",
+    "category": "Origin",
+    "description": "Your physical fortitude gives you extraordinary endurance and vitality.",
+    "bullets": [
+      "Hit Point Maximum: Your Hit Point maximum increases by an amount equal to twice your character level (increases by 2 at Level 1, and +2 each level thereafter)."
+    ],
+    "phbPage": 210
+  }
+]
+

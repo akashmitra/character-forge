@@ -1,0 +1,420 @@
+[
+  {
+    "id": "human",
+    "name": "Human",
+    "tagline": "Resourceful, versatile, and endlessly ambitious innovators",
+    "description": "Humans are known for their adaptability, endurance, and boundless curiosity. Found throughout the multiverse, they build empires, delve dungeons, and master diverse crafts.",
+    "size": "Medium or Small",
+    "speed": 30,
+    "specialOriginFeatChoice": true,
+    "specialSkillChoice": true,
+    "traits": [
+      {
+        "name": "Resourceful",
+        "phbPage": 186,
+        "description": "You gain Heroic Inspiration whenever you finish a Long Rest."
+      },
+      {
+        "name": "Skillful",
+        "phbPage": 186,
+        "description": "You gain proficiency in one skill of your choice."
+      },
+      {
+        "name": "Versatile",
+        "phbPage": 186,
+        "description": "You gain an Origin Feat of your choice in addition to the one granted by your background."
+      }
+    ],
+    "phbPage": 186
+  },
+  {
+    "id": "elf",
+    "name": "Elf",
+    "tagline": "Graceful immortals with deep magical ties and sharp senses",
+    "description": "Elves are magical people of otherworldly grace, living in the world but not entirely part of it. They love nature, art, and music.",
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "phbPage": 188,
+        "description": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Elven Lineage",
+        "phbPage": 188,
+        "description": "You are descended from one of the first elf bloodlines: Drow, High Elf, or Wood Elf."
+      },
+      {
+        "name": "Fey Ancestry",
+        "phbPage": 188,
+        "description": "You have Advantage on saving throws you make to avoid or end the Charmed condition on yourself."
+      },
+      {
+        "name": "Keen Senses",
+        "phbPage": 188,
+        "description": "You have proficiency in the Perception skill."
+      },
+      {
+        "name": "Trance",
+        "phbPage": 188,
+        "description": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation."
+      }
+    ],
+    "lineageTitle": "Elven Lineage",
+    "lineages": [
+      {
+        "id": "drow",
+        "name": "Drow",
+        "description": "Adapted to the Underdark with superior darkvision and faerie magic.",
+        "traits": [
+          { "name": "Superior Darkvision", "description": "Your Darkvision range is 120 feet.", "phbPage": 188 },
+          { "name": "Drow Magic", "description": "You know the Dancing Lights cantrip. At level 3 you learn Faerie Fire, and at level 5 Darkness.", "phbPage": 188 }
+        ],
+        "spellsGranted": ["Dancing Lights"],
+        "phbPage": 188
+      },
+      {
+        "id": "high-elf",
+        "name": "High Elf",
+        "description": "Infused with arcane magic and graceful precision.",
+        "traits": [
+          { "name": "High Elf Magic", "description": "You know one cantrip of your choice from the Wizard spell list (e.g. Prestidigitation or Fire Bolt). Whenever you finish a Long Rest, you can replace it.", "phbPage": 188 },
+          { "name": "Arcane Mastery", "description": "At level 3 learn Detect Magic, and at level 5 Misty Step.", "phbPage": 188 }
+        ],
+        "spellsGranted": ["Prestidigitation"],
+        "phbPage": 188
+      },
+      {
+        "id": "wood-elf",
+        "name": "Wood Elf",
+        "description": "Fleet of foot with instinctual druidic gifts.",
+        "traits": [
+          { "name": "Fleet of Foot", "description": "Your walking speed is increased to 35 feet.", "phbPage": 188 },
+          { "name": "Wood Elf Magic", "description": "You know the Druidcraft cantrip. At level 3 learn Longstrider, and at level 5 Pass without Trace.", "phbPage": 188 }
+        ],
+        "spellsGranted": ["Druidcraft"],
+        "phbPage": 188
+      }
+    ],
+    "phbPage": 187
+  },
+  {
+    "id": "dwarf",
+    "name": "Dwarf",
+    "tagline": "Stout, resilient subterranean champions carved from bedrock",
+    "description": "Dwarves were raised from stone and forge. Renowned for their endurance, craftsmanship, and ancient subterranean fortresses.",
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "phbPage": 190,
+        "description": "You can see in dim light within 120 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Dwarven Resilience",
+        "phbPage": 190,
+        "description": "You have Resistance to Poison damage and Advantage on saving throws you make to avoid or end the Poisoned condition."
+      },
+      {
+        "name": "Dwarven Toughness",
+        "phbPage": 190,
+        "description": "Your Hit Point maximum increases by 1, and it increases by 1 every time you gain a level."
+      },
+      {
+        "name": "Stonecunning",
+        "phbPage": 190,
+        "description": "As a Bonus Action, gain Tremorsense with a range of 60 feet for 10 minutes while touching stone surfaces. Uses equal to PB per Long Rest."
+      }
+    ],
+    "phbPage": 189
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "tagline": "Nimble, lucky homebodies with immense courage when tested",
+    "description": "Halflings cherish peaceful comforts, good meals, and close bonds. Though small, their uncanny luck and bravery make them legendary adventurers.",
+    "size": "Small",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Brave",
+        "phbPage": 192,
+        "description": "You have Advantage on saving throws you make to avoid or end the Frightened condition."
+      },
+      {
+        "name": "Halfling Nimbleness",
+        "phbPage": 192,
+        "description": "You can move through the space of any creature that is of a size larger than yours."
+      },
+      {
+        "name": "Luck",
+        "phbPage": 192,
+        "description": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+      },
+      {
+        "name": "Naturally Stealthy",
+        "phbPage": 192,
+        "description": "You can take the Hide action even when obscured only by a creature that is at least one size larger than you."
+      }
+    ],
+    "phbPage": 191
+  },
+  {
+    "id": "dragonborn",
+    "name": "Dragonborn",
+    "tagline": "Proud dragon-kin unleashing elemental breath and draconic vigor",
+    "description": "Dragonborn carry the majesty and destructive fury of true dragons, possessing scaled hide, elemental breath, and unyielding honor.",
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Draconic Ancestry",
+        "phbPage": 194,
+        "description": "Choose your lineage: Black (Acid), Blue (Lightning), Brass (Fire), Bronze (Lightning), Copper (Acid), Gold (Fire), Green (Poison), Red (Fire), Silver (Cold), or White (Cold)."
+      },
+      {
+        "name": "Breath Weapon",
+        "phbPage": 194,
+        "description": "Exhale elemental power in a 15-foot cone or 30-foot line (1d10 damage on failed Dex/Con save). Usable PB times per Long Rest, replacing one attack."
+      },
+      {
+        "name": "Damage Resistance",
+        "phbPage": 194,
+        "description": "You have Resistance to the damage type associated with your Draconic Ancestry."
+      },
+      {
+        "name": "Darkvision",
+        "phbPage": 194,
+        "description": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Draconic Flight (Level 5)",
+        "phbPage": 194,
+        "description": "At level 5, sprout spectral dragon wings as a Bonus Action for 10 minutes (flying speed equal to speed)."
+      }
+    ],
+    "lineageTitle": "Draconic Heritage",
+    "lineages": [
+      { "id": "black", "name": "Black (Acid)", "description": "Acid breath (30-ft line, Dex save) and Acid resistance.", "traits": [], "phbPage": 194 },
+      { "id": "blue", "name": "Blue (Lightning)", "description": "Lightning breath (30-ft line, Dex save) and Lightning resistance.", "traits": [], "phbPage": 194 },
+      { "id": "brass", "name": "Brass (Fire)", "description": "Fire breath (30-ft line, Dex save) and Fire resistance.", "traits": [], "phbPage": 194 },
+      { "id": "bronze", "name": "Bronze (Lightning)", "description": "Lightning breath (30-ft line, Dex save) and Lightning resistance.", "traits": [], "phbPage": 194 },
+      { "id": "copper", "name": "Copper (Acid)", "description": "Acid breath (30-ft line, Dex save) and Acid resistance.", "traits": [], "phbPage": 194 },
+      { "id": "gold", "name": "Gold (Fire)", "description": "Fire breath (15-ft cone, Dex save) and Fire resistance.", "traits": [], "phbPage": 194 },
+      { "id": "green", "name": "Green (Poison)", "description": "Poison breath (15-ft cone, Con save) and Poison resistance.", "traits": [], "phbPage": 194 },
+      { "id": "red", "name": "Red (Fire)", "description": "Fire breath (15-ft cone, Dex save) and Fire resistance.", "traits": [], "phbPage": 194 },
+      { "id": "silver", "name": "Silver (Cold)", "description": "Cold breath (15-ft cone, Con save) and Cold resistance.", "traits": [], "phbPage": 194 },
+      { "id": "white", "name": "White (Cold)", "description": "Cold breath (15-ft cone, Con save) and Cold resistance.", "traits": [], "phbPage": 194 }
+    ],
+    "phbPage": 193
+  },
+  {
+    "id": "gnome",
+    "name": "Gnome",
+    "tagline": "Inquisitive inventors and illusionists with quick minds",
+    "description": "Gnomes celebrate life, discovery, invention, and nature magic with bright enthusiasm and indomitable curiosity.",
+    "size": "Small",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "phbPage": 196,
+        "description": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Gnomish Cunning",
+        "phbPage": 196,
+        "description": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
+      },
+      {
+        "name": "Gnomish Lineage",
+        "phbPage": 196,
+        "description": "You are descended from Forest Gnomes or Rock Gnomes."
+      }
+    ],
+    "lineageTitle": "Gnomish Lineage",
+    "lineages": [
+      {
+        "id": "forest-gnome",
+        "name": "Forest Gnome",
+        "description": "Attuned to woods and beasts with illusion magic.",
+        "traits": [
+          { "name": "Natural Illusionist", "description": "You know the Minor Illusion cantrip.", "phbPage": 196 },
+          { "name": "Speak with Small Beasts", "description": "You always have Speak with Animals prepared and can cast it PB times per Long Rest without spell slots.", "phbPage": 196 }
+        ],
+        "spellsGranted": ["Minor Illusion"],
+        "phbPage": 196
+      },
+      {
+        "id": "rock-gnome",
+        "name": "Rock Gnome",
+        "description": "Natural artisans and tinkerers of clocks and gadgets.",
+        "traits": [
+          { "name": "Tinker", "description": "You know Mending and Prestidigitation cantrips and can craft tiny clockwork devices.", "phbPage": 196 }
+        ],
+        "spellsGranted": ["Mending", "Prestidigitation"],
+        "phbPage": 196
+      }
+    ],
+    "phbPage": 195
+  },
+  {
+    "id": "orc",
+    "name": "Orc",
+    "tagline": "Indomitable survivors blessed with boundless stamina and adrenaline",
+    "description": "Orcs are staunch allies and fearless champions, drawing deep resilience and ferocity from their heritage.",
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Adrenaline Rush",
+        "phbPage": 198,
+        "description": "As a Bonus Action, take the Dash action and gain temporary HP equal to your Proficiency Bonus. Usable PB times per Long Rest."
+      },
+      {
+        "name": "Darkvision",
+        "phbPage": 198,
+        "description": "You can see in dim light within 120 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Relentless Endurance",
+        "phbPage": 198,
+        "description": "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Recharges on a Long Rest."
+      }
+    ],
+    "phbPage": 197
+  },
+  {
+    "id": "tiefling",
+    "name": "Tiefling",
+    "tagline": "Fiendish descendants bearing otherworldly grace and infernal flame",
+    "description": "Tieflings touch the planar fires of the Lower Planes, manifesting horns, sharp gazes, and innate fiendish spellcraft.",
+    "size": "Medium or Small",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "phbPage": 200,
+        "description": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Fiendish Legacy",
+        "phbPage": 200,
+        "description": "Choose Abyssal (Poison), Chthonic (Necrotic), or Infernal (Fire)."
+      },
+      {
+        "name": "Otherworldly Presence",
+        "phbPage": 200,
+        "description": "You know the Thaumaturgy cantrip."
+      }
+    ],
+    "lineageTitle": "Fiendish Legacy",
+    "lineages": [
+      {
+        "id": "abyssal",
+        "name": "Abyssal",
+        "description": "Tainted by chaos and the Abyss. Poison Resistance and Poison Spray cantrip.",
+        "traits": [
+          { "name": "Abyssal Magic", "description": "You have Poison Resistance and know Poison Spray. At level 3 Ray of Sickness, level 5 Hold Person.", "phbPage": 200 }
+        ],
+        "spellsGranted": ["Poison Spray"],
+        "phbPage": 200
+      },
+      {
+        "id": "chthonic",
+        "name": "Chthonic",
+        "description": "Tied to Hades and the Shadowfell. Necrotic Resistance and Chill Touch cantrip.",
+        "traits": [
+          { "name": "Chthonic Magic", "description": "You have Necrotic Resistance and know Chill Touch. At level 3 False Life, level 5 Ray of Enfeeblement.", "phbPage": 200 }
+        ],
+        "spellsGranted": ["Chill Touch"],
+        "phbPage": 200
+      },
+      {
+        "id": "infernal",
+        "name": "Infernal",
+        "description": "Descended from the Nine Hells. Fire Resistance and Fire Bolt cantrip.",
+        "traits": [
+          { "name": "Infernal Magic", "description": "You have Fire Resistance and know Fire Bolt. At level 3 Hellish Rebuke, level 5 Darkness.", "phbPage": 200 }
+        ],
+        "spellsGranted": ["Fire Bolt"],
+        "phbPage": 200
+      }
+    ],
+    "phbPage": 199
+  },
+  {
+    "id": "aasimar",
+    "name": "Aasimar",
+    "tagline": "Mortal champions infused with the holy radiance of the Upper Planes",
+    "description": "Aasimar are mortals touched by the sacred light of Mount Celestia and Elysium, sent to be defenders of justice and hope.",
+    "size": "Medium or Small",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Celestial Resistance",
+        "phbPage": 202,
+        "description": "You have Resistance to Necrotic damage and Radiant damage."
+      },
+      {
+        "name": "Darkvision",
+        "phbPage": 202,
+        "description": "You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light."
+      },
+      {
+        "name": "Healing Hands",
+        "phbPage": 202,
+        "description": "As a Magic action, touch a creature to restore HP equal to 1d4 + your character level (1d4+1 at Level 1). Once per Long Rest."
+      },
+      {
+        "name": "Light Bearer",
+        "phbPage": 202,
+        "description": "You know the Light cantrip."
+      },
+      {
+        "name": "Celestial Revelation (Level 3)",
+        "phbPage": 202,
+        "description": "At level 3, transform for 1 minute unleashing angelic wings or radiant light."
+      }
+    ],
+    "phbPage": 201
+  },
+  {
+    "id": "goliath",
+    "name": "Goliath",
+    "tagline": "Towering mountain champions imbued with primordial giant ancestry",
+    "description": "Goliaths are giant-kin hailing from mountain peaks, possessing immense physical stature, stone-carved muscle, and giant boons.",
+    "size": "Medium",
+    "speed": 35,
+    "traits": [
+      {
+        "name": "Giant Ancestry",
+        "phbPage": 204,
+        "description": "Choose one giant supernatural boon: Cloud, Fire, Frost, Hill, Stone, or Storm (usable PB times per Long Rest)."
+      },
+      {
+        "name": "Large Form (Level 5)",
+        "phbPage": 204,
+        "description": "At level 5, become Large size as a Bonus Action for 10 minutes with +10 ft speed."
+      },
+      {
+        "name": "Powerful Build",
+        "phbPage": 204,
+        "description": "You have Advantage on saving throws to end the Grappled condition, and you count as one size larger for carrying capacity and pushing/dragging."
+      }
+    ],
+    "lineageTitle": "Giant Ancestry",
+    "lineages": [
+      { "id": "cloud", "name": "Cloud Giant", "description": "Cloud's Jaunt: As a Bonus Action, magically teleport up to 30 feet.", "traits": [], "phbPage": 204 },
+      { "id": "fire", "name": "Fire Giant", "description": "Fire's Burn: Deal an extra 1d10 Fire damage when hitting with an attack.", "traits": [], "phbPage": 204 },
+      { "id": "frost", "name": "Frost Giant", "description": "Frost's Chill: Deal 1d6 extra Cold damage and reduce target speed by 10 ft.", "traits": [], "phbPage": 204 },
+      { "id": "hill", "name": "Hill Giant", "description": "Hill's Tumble: Knock a Large or smaller creature Prone on hit.", "traits": [], "phbPage": 204 },
+      { "id": "stone", "name": "Stone Giant", "description": "Stone's Endurance: As a Reaction on taking damage, reduce damage by 1d12 + Con mod.", "traits": [], "phbPage": 204 },
+      { "id": "storm", "name": "Storm Giant", "description": "Storm's Thunder: As a Reaction on taking damage, deal 1d8 Thunder damage to the attacker.", "traits": [], "phbPage": 204 }
+    ],
+    "phbPage": 203
+  }
+]
+

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#16130F] text-[#F5EFE0] min-h-screen font-serif;
+    background-image: 
+      radial-gradient(ellipse at 50% 0%, rgba(110, 27, 27, 0.15), transparent 70%),
+      radial-gradient(circle at 100% 100%, rgba(194, 147, 54, 0.08), transparent 50%),
+      radial-gradient(circle at 0% 100%, rgba(66, 88, 50, 0.08), transparent 50%);
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', 'Spectral SC', 'Spectral', serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Custom Scrollbar for tabletop tome aesthetics */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16130F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A3E2D;
+  border-radius: 3px;
+  border: 1px solid #C29336;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C29336;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    background-image: none !important;
+  }
+  header, nav, .print\:hidden {
+    display: none !important;
+  }
+}
+
