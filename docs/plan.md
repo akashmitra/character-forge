@@ -1,4 +1,4 @@
-# D&D Character Forge — Project Plan
+# Character Forge — Project Plan
 
 **Scope:** Level 1 character creation, 2024 Player's Handbook rules, deep and complete on core content.
 **Stack:** React + Vite, PWA (installable, offline).

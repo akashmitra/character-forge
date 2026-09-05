@@ -1,4 +1,4 @@
-# ⚔️ D&D Character Forge — 2024 Player's Handbook Edition ⚔️
+# ⚔️ Character Forge — 2024 Player's Handbook Edition ⚔️
 
 [![Ruleset: D&D 2024 (5.24e)](https://img.shields.io/badge/Ruleset-2024%20PHB%20(5.24e)-6E1B1B?style=for-the-badge&logo=dungeonsanddragons&logoColor=DFC068)](https://dndbeyond.com)
 [![PWA: Offline Ready](https://img.shields.io/badge/PWA-100%25%20Offline%20Ready-3E522D?style=for-the-badge&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)

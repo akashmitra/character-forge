@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCharacter } from '../../state/CharacterContext';
 import { BookOpen, Users, Wand2, FileText, Printer, PlusCircle, Save } from 'lucide-react';
+import { FieryD20Logo } from './FieryD20Logo';
 
 export const Header: React.FC = () => {
   const {
@@ -16,12 +17,10 @@ export const Header: React.FC = () => {
     <header className="sticky top-0 z-30 w-full border-b border-parchment-border/40 bg-[#191510]/95 backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-3">
         {/* Logo and App Title */}
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full border border-dnd-gold bg-dnd-crimson flex items-center justify-center shadow-dnd-glow">
-            <span className="font-cinzel font-black text-dnd-gold-light text-base">20</span>
-          </div>
+        <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => setActiveView('roster')}>
+          <FieryD20Logo size={42} />
           <div>
-            <h1 className="font-cinzel font-black text-base sm:text-lg text-parchment tracking-wider uppercase leading-none">
+            <h1 className="font-cinzel font-black text-base sm:text-lg text-parchment tracking-wider uppercase leading-none hover:text-dnd-gold-light transition-colors">
               D&amp;D Character Forge
             </h1>
             <span className="text-[11px] font-sans text-dnd-gold font-medium tracking-wide">
