@@ -170,7 +170,8 @@ character-forge/
 │   │   ├── abilityScores.ts    # Point buy curves, standard array, 4d6 roll
 │   │   ├── statsCalculator.ts  # Derived AC, HP, saves, skills, passive scores
 │   │   ├── weaponMastery.ts    # 2024 weapon mastery mechanics
-│   │   └── spellcasting.ts     # Spell slots & DC resolvers
+│   │   ├── spellcasting.ts     # Spell slots & DC resolvers
+│   │   └── pdfFiller.ts        # Client-side PDF population engine (pdf-lib)
 │   ├── storage/                # Client-side persistence
 │   │   ├── db.ts               # IndexedDB wrapper (idb)
 │   │   └── exportImport.ts     # JSON file exporter and importer

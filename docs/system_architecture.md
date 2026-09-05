@@ -152,7 +152,7 @@ Built upon the `idb` Promise-based client:
 | **Header & Fiery d20** | Top navigation bar with animated molten fiery d20 die, character overview, quick actions, and compendium toggle. |
 | **Creation Wizard** | 9-step guided walkthrough with real-time validation, background ASI toggles, Point Buy math, and 4d6 dice rolling. |
 | **Character Sheet** | Interactive tabletop interface with clickable ability checks, saving throws, weapon attacks, HP +/- counters, and spell slot toggles. |
-| **Printable Sheet** | High-contrast, black/white & gold monochrome layout structured for A4/Letter paper printing and PDF export (`window.print()`). |
+| **Embedded PDF Reader & Print** | Pre-populates the official 2024 D&D PDF template client-side via `pdf-lib`, featuring an in-page embedded PDF reader, direct PDF download, and native print. |
 | **Character Roster** | Hero gallery grid displaying saved characters with quick stats, duplicate, delete, and JSON import/export. |
 | **PHB Compendium** | Slide-out quick-lookup drawer allowing real-time keyword search across all 2024 rules, feats, masteries, and spells. |
 
