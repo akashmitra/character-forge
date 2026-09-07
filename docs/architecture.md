@@ -1,19 +1,35 @@
-# D&D 2024 Character Forge — System Architecture
+# D&D 2024 Character Forge — System Architecture Specification
 
-**Document Version:** 1.0.0  
-**Target Specification:** 2024 Dungeons & Dragons Player's Handbook (Rules Revision 5.24e)  
-**System Scope:** Level 1 Character Creation, Interactive Tabletop Sheet, Client-Side PDF Form Filling & Embedded Reader, Compendium Reference, and Offline PWA.
+**Document Version:** 1.1.0  
+**Ruleset Standard:** 2024 Dungeons & Dragons Player's Handbook (Revision 5.24e)  
+**System Scope:** Level 1 Character Creation, Interactive Tabletop Sheet, Client-Side PDF Form Filling & Embedded Reader, Searchable PHB Compendium, and Offline PWA.
 
 ---
 
-## 1. Executive Summary & Design Principles
+## 1. Executive Summary & Core Design Principles
 
 The **D&D 2024 Character Forge** is an offline-first, client-side Progressive Web Application (PWA) engineered to provide deep, rule-accurate, and information-dense Level 1 character creation adhering to the revised 2024 core rules.
 
+```
+                  ┌─────────────────────────────────────────┐
+                  │       D&D 2024 Character Forge          │
+                  │  Level 1 Creator · Sheet · PDF · PWA    │
+                  └────────────────────┬────────────────────┘
+                                       │
+         ┌─────────────────────────────┼─────────────────────────────┐
+         ▼                             ▼                             ▼
+┌──────────────────┐         ┌──────────────────┐         ┌──────────────────┐
+│ True Offline     │         │ Deterministic    │         │ Client-Side PDF  │
+│ Zero-Backend     │         │ Rules Engine     │         │ AcroForm Engine  │
+│ IndexedDB (idb)  │         │ Pure TypeScript  │         │ pdf-lib in-page  │
+└──────────────────┘         └──────────────────┘         └──────────────────┘
+```
+
 ### Core Architectural Principles
+
 1. **Zero-Backend Dependency (True Offline-First)**:
-   - All character storage is persisted client-side in the browser's **IndexedDB** storage engine.
-   - All rule content (classes, species, backgrounds, feats, equipment, spells) is packaged directly as static JSON datasets precached via Service Workers.
+   - All character storage is persisted client-side in the browser's **IndexedDB** storage engine via `idb`.
+   - All rule content (classes, species, backgrounds, feats, equipment, spells) is packaged as static JSON datasets precached via Service Workers.
 2. **Client-Side PDF Form Population & Embedded Reader (`pdf-lib`)**:
    - The official 2024 D&D character sheet PDF template (`template/charactersheet.pdf`) is loaded and populated dynamically in the browser, providing an in-page embedded PDF reader, direct PDF downloads, and native print without sending any data over a network.
 3. **Deterministic Rules Calculation Engine**:
@@ -126,6 +142,21 @@ The engine supports all 8 2024 mastery traits:
 - **Topple**: Target must make Con save ($\text{DC} = 8 + \text{PB} + \text{Mod}$) or fall Prone.
 - **Vex**: Gain Advantage on next attack roll against the target.
 
+### 3.3 Client-Side PDF Generation Engine (`src/engine/pdfFiller.ts`)
+
+The PDF subsystem provides pure client-side PDF form filling:
+- **AcroForm Mapping**: Loads `template/charactersheet.pdf` into a `pdf-lib` document instance.
+- **Dynamic Field Population**: Sets text fields (`Text1`, `Text6`, `Text21`...`Text68`) and checkboxes (`Check Box5`, `Check Box24`...) corresponding to:
+  - Header data (Name, Class & Level, Background, Species, Alignment, Deity, Pronouns).
+  - Ability scores and calculated $\pm$ modifiers.
+  - Senses & Passives (Perception, Investigation, Insight).
+  - Combat Vitals (AC, Initiative, Speed, Maximum HP, Hit Dice).
+  - Weapon attacks table (rows 1–6 with to-hit bonuses, damage formulas, and mastery notes).
+  - Features, Traits, and full Origin Feat mechanics with PHB citations.
+  - Equipment, inventory weights, and Gold (GP).
+  - Spellcasting DC, attack bonus, cantrips, and prepared spells.
+- **Blob Object URL Creation**: Generates a fast `Blob` URL passed to `<iframe />` viewer elements for instant in-page preview.
+
 ---
 
 ## 4. State Management & Storage Architecture
@@ -176,4 +207,3 @@ The application utilizes `vite-plugin-pwa` with Google Workbox:
 The architecture includes automated verification:
 - **`scripts/validateData.ts`**: Verifies schema integrity across all classes, species, backgrounds, feats, equipment, and spells, enforcing that no content item is missing a `phbPage` reference.
 - **TypeScript Strict Checking**: Enforces type safety for character choices and derived calculations.
-

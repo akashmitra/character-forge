@@ -21,11 +21,10 @@ export const StepAbilities: React.FC = () => {
   const { character, updateCharacter, derivedStats } = useCharacter();
   const [selectedDieId, setSelectedDieId] = useState<string | null>(null);
 
-  const setMethod = (method: 'standard' | 'pointbuy' | 'roll') => {
-    if (method === 'standard') {
+  const setMethod = (method: 'manual' | 'pointbuy' | 'roll') => {
+    if (method === 'manual') {
       updateCharacter({
-        abilityMethod: 'standard',
-        baseAbilities: { str: 15, dex: 14, con: 13, int: 12, wis: 10, cha: 8 }
+        abilityMethod: 'manual'
       });
     } else if (method === 'pointbuy') {
       updateCharacter({
@@ -177,14 +176,14 @@ export const StepAbilities: React.FC = () => {
           <div className="flex items-center gap-1 bg-ink-pure p-1 rounded border border-parchment-border/40 text-xs font-sans">
             <button
               type="button"
-              onClick={() => setMethod('standard')}
+              onClick={() => setMethod('manual')}
               className={`px-3 py-1.5 rounded transition-all ${
-                character.abilityMethod === 'standard'
+                character.abilityMethod === 'manual' || character.abilityMethod === 'standard'
                   ? 'bg-dnd-gold text-ink-pure font-bold shadow-sm'
                   : 'text-parchment-dim hover:text-parchment'
               }`}
             >
-              Standard Array
+              Manual Entry
             </button>
             <button
               type="button"
@@ -211,6 +210,35 @@ export const StepAbilities: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Manual Entry Helper Banner */}
+      {(character.abilityMethod === 'manual' || character.abilityMethod === 'standard') && (
+        <div className="p-3 rounded bg-ink-pure/80 border border-parchment-border/40 flex flex-wrap items-center justify-between gap-3 text-xs font-sans">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-dnd-gold" />
+            <span>
+              Manual Input Mode: <span className="text-parchment-light">Type custom scores (1–30) or use the preset shortcuts.</span>
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-parchment-dim text-[11px]">Presets:</span>
+            <button
+              type="button"
+              onClick={() => updateCharacter({ baseAbilities: { str: 15, dex: 14, con: 13, int: 12, wis: 10, cha: 8 } })}
+              className="px-2.5 py-1 rounded bg-ink-light border border-parchment-border/40 hover:border-dnd-gold text-parchment text-[11px] font-medium transition-colors"
+            >
+              Standard (15, 14, 13, 12, 10, 8)
+            </button>
+            <button
+              type="button"
+              onClick={() => updateCharacter({ baseAbilities: { str: 10, dex: 10, con: 10, int: 10, wis: 10, cha: 10 } })}
+              className="px-2.5 py-1 rounded bg-ink-light border border-parchment-border/40 hover:border-dnd-gold text-parchment text-[11px] font-medium transition-colors"
+            >
+              All 10s
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Point Buy Status Bar */}
       {character.abilityMethod === 'pointbuy' && (
@@ -343,25 +371,64 @@ export const StepAbilities: React.FC = () => {
               </div>
 
               {/* Mode-specific controls */}
-              {character.abilityMethod === 'standard' && (
-                <div className="space-y-1">
-                  <label className="text-[11px] font-sans text-parchment-dim block">
-                    Select Standard Value:
-                  </label>
-                  <select
-                    value={base}
-                    onChange={(e) => {
-                      const val = parseInt(e.target.value, 10);
-                      updateCharacter({
-                        baseAbilities: { ...character.baseAbilities, [key]: val }
-                      });
-                    }}
-                    className="w-full px-2 py-1 rounded bg-ink-pure border border-parchment-border/40 text-xs text-parchment font-sans"
-                  >
-                    {STANDARD_ARRAY.map(v => (
-                      <option key={v} value={v}>{v}</option>
-                    ))}
-                  </select>
+              {(character.abilityMethod === 'manual' || character.abilityMethod === 'standard') && (
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-[11px] font-sans text-parchment-dim">
+                    <span>Base Score:</span>
+                    <span className="text-[10px] text-dnd-gold font-medium">1 – 30</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const val = Math.max(1, base - 1);
+                        updateCharacter({
+                          baseAbilities: { ...character.baseAbilities, [key]: val }
+                        });
+                      }}
+                      className="w-8 h-8 rounded border border-parchment-border/40 bg-ink-pure hover:bg-ink-light font-bold text-sm text-parchment flex items-center justify-center transition-colors shadow-inner"
+                      title="Decrease base score"
+                    >
+                      -
+                    </button>
+                    <input
+                      type="number"
+                      min={1}
+                      max={30}
+                      value={base || ''}
+                      onChange={(e) => {
+                        const raw = e.target.value;
+                        if (raw === '') {
+                          updateCharacter({
+                            baseAbilities: { ...character.baseAbilities, [key]: 10 }
+                          });
+                          return;
+                        }
+                        const parsed = parseInt(raw, 10);
+                        if (!isNaN(parsed)) {
+                          const val = Math.min(30, Math.max(1, parsed));
+                          updateCharacter({
+                            baseAbilities: { ...character.baseAbilities, [key]: val }
+                          });
+                        }
+                      }}
+                      className="w-full text-center py-1.5 px-2 rounded bg-ink-pure border border-parchment-border/50 text-parchment font-cinzel text-base font-bold focus:outline-none focus:border-dnd-gold focus:ring-1 focus:ring-dnd-gold transition-all"
+                      placeholder="10"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const val = Math.min(30, base + 1);
+                        updateCharacter({
+                          baseAbilities: { ...character.baseAbilities, [key]: val }
+                        });
+                      }}
+                      className="w-8 h-8 rounded border border-parchment-border/40 bg-ink-pure hover:bg-ink-light font-bold text-sm text-parchment flex items-center justify-center transition-colors shadow-inner"
+                      title="Increase base score"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               )}
 

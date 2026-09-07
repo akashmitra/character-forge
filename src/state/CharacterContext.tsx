@@ -29,7 +29,7 @@ export function createDefaultCharacter(): CharacterData {
       plusTwo: 'str',
       plusOnes: ['con']
     },
-    abilityMethod: 'standard',
+    abilityMethod: 'manual',
     baseAbilities: {
       str: 15,
       dex: 13,
